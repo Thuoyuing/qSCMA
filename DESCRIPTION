@@ -1,0 +1,23 @@
+Package: qSCMA
+Title: Single-cell metallomics analysis framwork utilizing quantile
+        features
+Version: 0.0.0.9000
+Authors@R: 
+    person("Guohuan", "Zhang", , "granhamzhang@foxmail.com", role = c("aut", "cre"))
+Description: A package for Single-cell metallomics analysis of linking
+    health effect to metal features, including quantile, heterogeneity,
+    mean value, and prevalence.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: bbotk, caret, ddpcr, dplyr, ggplot2, lubridate, mlr3,
+        mlr3tuning, paradox, purrr, R6, Rcpp, stringr, tibble, tictoc,
+        tidyselect, vroom, writexl
+Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
+LinkingTo: Rcpp
+Config/testthat/edition: 3
+NeedsCompilation: yes
+Packaged: 2026-01-12 06:36:38 UTC; GranhamZhang
+Author: Guohuan Zhang [aut, cre]
+Maintainer: Guohuan Zhang <granhamzhang@foxmail.com>
