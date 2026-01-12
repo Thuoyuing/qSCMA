@@ -219,7 +219,10 @@ FtIdent <- function(MT,
     message(stringr::str_c("Parameter tunring: ",Var.y," ~ ",Var.x,
                            NowTime))
 
-    vars <- dt %>% names() %>% stringr::str_detect(Var.x) %>% dt[,.] %>% names()
+    dt %>%
+      names() %>%
+      stringr::str_detect(stringr::str_c(Var.x,"_")) %>%
+      dt[,.] %>% names() -> vars
     data_temp <- dt
     data_temp %>%
       dplyr::select(tidyselect::all_of(vars)) %>%

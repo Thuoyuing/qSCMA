@@ -18,6 +18,6 @@ Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 LinkingTo: Rcpp
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2026-01-12 06:36:38 UTC; GranhamZhang
+Packaged: 2026-01-12 11:54:33 UTC; GranhamZhang
 Author: Guohuan Zhang [aut, cre]
 Maintainer: Guohuan Zhang <granhamzhang@foxmail.com>
