@@ -12,12 +12,12 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Imports: bbotk, caret, ddpcr, dplyr, ggplot2, lubridate, mlr3,
-        mlr3tuning, paradox, purrr, R6, Rcpp, stringr, tibble, tictoc,
-        tidyselect, vroom, writexl
+        mlr3learners, mlr3tuning, paradox, purrr, R6, Rcpp, stringr,
+        tibble, tictoc, tidyselect, vroom, writexl
 Suggests: knitr, rmarkdown, testthat (>= 3.0.0)
 LinkingTo: Rcpp
 Config/testthat/edition: 3
 NeedsCompilation: yes
-Packaged: 2026-01-12 11:54:33 UTC; GranhamZhang
+Packaged: 2026-01-12 13:03:49 UTC; GranhamZhang
 Author: Guohuan Zhang [aut, cre]
 Maintainer: Guohuan Zhang <granhamzhang@foxmail.com>

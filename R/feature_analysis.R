@@ -243,8 +243,9 @@ FtIdent <- function(MT,
       mlr3::as_task_regr(target = y,
                          id = stringr::str_c(y,"~",Var.x)) -> task_train
 
-    learner.rf = mlr3::lrn("regr.ranger",
-                           predict_sets = c("train", "test"))
+    learner.rf = mlr3learners::LearnerRegrRanger$new()
+    learner.rf$predict_sets = c("train", "test")
+
     search_space = paradox::ps(
       max.depth = paradox::p_int(lower = 1, upper = 20),
       mtry.ratio = paradox::p_dbl(lower = 0.2, upper = 0.7),
