@@ -310,7 +310,8 @@ FtIdent <- function(MT,
     as.vector() -> elements
 
   purrr::map_dfr(elements,
-                 ~batch.func(.,
+                 ~batch.func(Var.x = .,
+                             Var.y=outcome,
                              Var.c=covariate,
                              dt=MT$TransReshapedDT,
                              task = task)) %>%
