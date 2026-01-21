@@ -27,6 +27,9 @@ DtReshape <- function(MT,
   QData %>% utils::write.csv(.,
                              "output/ReshapedDT.CSV")
   QData -> MT$ReshapedDT
+  QData %>%
+    dplyr::select(-filename) %>%
+    names() -> MT$ReshapedFeatures
   lubridate::now() %>%
     stringr::str_replace_all(":",".") %>%
     stringr::str_replace_all("-",".") -> NowTime

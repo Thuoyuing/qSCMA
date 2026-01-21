@@ -25,7 +25,8 @@ ReadMT <- function(cell_data_path, outcome_data) {
       RawData = list(dt_cell = NULL, dt_outc = NULL),
       ReshapedDT = NULL,
       TransReshapedDT = NULL,
-      FeaturePerformance = NULL
+      FeaturePerformance = NULL,
+      ReshapedFeatures = NULL
     ),
     lock_class = FALSE,
     lock_objects = FALSE

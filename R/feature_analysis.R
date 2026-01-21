@@ -20,15 +20,12 @@ FtEvalu <- function(MT,
 
   MT$ReshapedDT -> ReshapedDT
 
-  ReshapedDT %>%
-    names() %>%
+  MT$ReshapedFeatures %>%
     stringr::str_extract(.,"(?<=_)[a-zA-Z]") %>%
     unique() %>% stats::na.omit() %>%
     as.vector() -> FeatureType
 
-  ReshapedDT %>%
-    dplyr::select(-filename) %>%
-    names() %>%
+  MT$ReshapedFeatures %>%
     tibble::tibble(value=.) -> FT.ALL
 
   selectfunc <- function(key){
@@ -304,8 +301,7 @@ FtIdent <- function(MT,
   if(!file.exists(stringr::str_c("output/FeatureEvaluation_",task))){
     dir.create(stringr::str_c("output/FeatureEvaluation_",task),recursive = TRUE)}
 
-  MT$TransReshapedDT %>%
-    names() %>%
+  MT$ReshapedFeatures %>%
     stringr::str_extract(.,".*(?=_)") %>%
     unique() %>% stats::na.omit() %>%
     as.vector() -> elements
